@@ -2,12 +2,12 @@ package com.example.student.entity;
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "students")
+@Table(name = "student1")
 
 public class Student {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long id;
+    private int id;
     private String name;
     private String email;
     private String address;
@@ -15,14 +15,14 @@ public class Student {
 
     public Student(){};
 
-    public Student(String nsme,String email,String address,String student_class){
+    public Student(String name,String email,String address,String student_class){
         this.name = name;
         this.email = email;
         this.address = address;
         this.student_class = student_class;
     }
 
-    public Long getId(){
+    public int getId(){
         return id;
     }
 
